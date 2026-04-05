@@ -280,7 +280,7 @@ function StatsView({ date, setDate, onBack }) {
     <div>
       <div className="view-header">
         <div className="view-title">الإحصائية اليومية</div>
-        <div style={{display:'flex', gap: 10}}>
+        <div className="header-actions">
           <input type="date" className="date-picker" value={date} onChange={(e) => setDate(e.target.value)} />
           <button className="btn btn-export" onClick={handlePrint}>
             <Download size={18} /> تحميل PDF
@@ -336,7 +336,7 @@ function ReportView({ date, setDate, onBack }) {
     <div>
       <div className="view-header">
         <div className="view-title">تقرير الغياب اليومي</div>
-        <div style={{display:'flex', gap: 10}}>
+        <div className="header-actions">
           <input type="date" className="date-picker" value={date} onChange={(e) => setDate(e.target.value)} />
           <button className="btn btn-export" onClick={handlePrint}>
             <Download size={18} /> تحميل PDF للطباعة
