@@ -41,7 +41,7 @@ export default function App() {
             {isOnline ? 'متصل (البيانات متزامنة)' : 'غير متصل بالخادم'}
           </div>
           <Lock size={20} color="#7f8c8d" />
-          مدرستي - حضور وغياب المتعلمات
+          مدرستي - حضور وغياب الطلاب
         </div>
       </header>
 
@@ -222,7 +222,7 @@ function AttendanceView({ section, grade, date, setDate, onBack }) {
           <table>
             <thead>
               <tr>
-                <th style={{ width: '40%' }}>اسم الطالبة</th>
+                <th style={{ width: '40%' }}>اسم الطالب</th>
                 {data.periods.map(p => (
                   <th key={p.id} className="period-header">
                     الحصة {p.period_num}
@@ -352,7 +352,7 @@ function ReportView({ date, setDate, onBack }) {
               <tr>
                 <th>الصف</th>
                 <th>الفصل</th>
-                <th>اسم الطالبة</th>
+                <th>اسم الطالب</th>
                 <th>الحصص المتغيب عنها</th>
                 <th>الحالة</th>
               </tr>
